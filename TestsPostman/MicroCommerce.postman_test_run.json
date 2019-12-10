@@ -1,0 +1,238 @@
+{
+	"id": "09914c33-305d-4623-8aac-45b9934e04e4",
+	"name": "MicroCommerce",
+	"allTests": [],
+	"timestamp": "2019-12-10T14:19:24.642Z",
+	"collection_id": "d064e1ac-a9e1-450f-9621-c363902742fe",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "d064e1ac-a9e1-450f-9621-c363902742fe",
+		"name": "MicroCommerce",
+		"order": [
+			"ad2f66d6-2ccf-41ee-a67c-91cc6f57118e",
+			"6b2c0bc6-5d01-492a-91f5-3fa610969183",
+			"d8586739-f0e9-4031-be67-b7184918d5e5",
+			"3ed39e7b-0c65-4f35-9ee5-090f41c6d8f6",
+			"01ced7fb-2f9e-4e58-8e20-8389c65ec16d"
+		],
+		"folders_order": [],
+		"isFavorite": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": null,
+	"results": [
+		{
+			"name": "Liste des produits",
+			"id": "ad2f66d6-2ccf-41ee-a67c-91cc6f57118e",
+			"url": "localhost:9090/Produits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"124"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "124",
+			"totalRequestTime": "124",
+			"iterationResults": {}
+		},
+		{
+			"name": "Ajouter un produit",
+			"id": "6b2c0bc6-5d01-492a-91f5-3fa610969183",
+			"url": "localhost:9090/Produits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"340"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "340",
+			"totalRequestTime": "340",
+			"iterationResults": {}
+		},
+		{
+			"name": "Produits trier par ordre croissant",
+			"id": "d8586739-f0e9-4031-be67-b7184918d5e5",
+			"url": "localhost:9090/TrierProduits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"14"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "14",
+			"totalRequestTime": "14",
+			"iterationResults": {}
+		},
+		{
+			"name": "Ajouter un produit levé exception",
+			"id": "3ed39e7b-0c65-4f35-9ee5-090f41c6d8f6",
+			"url": "localhost:9090/Produits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"58"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "58",
+			"totalRequestTime": "58",
+			"iterationResults": {}
+		},
+		{
+			"name": "Liste produits avec marge",
+			"id": "01ced7fb-2f9e-4e58-8e20-8389c65ec16d",
+			"url": "localhost:9090/AdminProduits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"10"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "10",
+			"totalRequestTime": "10",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 0,
+	"totalFail": 0,
+	"totalTime": 546,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Liste des produits",
+			"id": "ad2f66d6-2ccf-41ee-a67c-91cc6f57118e",
+			"url": "localhost:9090/Produits",
+			"time": "2019-12-10T14:19:24.642Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "Ajouter un produit",
+			"id": "6b2c0bc6-5d01-492a-91f5-3fa610969183",
+			"url": "localhost:9090/Produits",
+			"time": "2019-12-10T14:19:24.642Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "Produits trier par ordre croissant",
+			"id": "d8586739-f0e9-4031-be67-b7184918d5e5",
+			"url": "localhost:9090/TrierProduits",
+			"time": "2019-12-10T14:19:24.642Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "Ajouter un produit levé exception",
+			"id": "3ed39e7b-0c65-4f35-9ee5-090f41c6d8f6",
+			"url": "localhost:9090/Produits",
+			"time": "2019-12-10T14:19:24.642Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "Liste produits avec marge",
+			"id": "01ced7fb-2f9e-4e58-8e20-8389c65ec16d",
+			"url": "localhost:9090/AdminProduits",
+			"time": "2019-12-10T14:19:24.642Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		}
+	],
+	"synced": false
+}
