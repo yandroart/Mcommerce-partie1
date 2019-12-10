@@ -20,6 +20,7 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 
 @Api( description="API pour es opérations CRUD sur les produits.")
@@ -107,6 +108,7 @@ public class ProductController {
     }
 
 
+    @ApiOperation(value = "Récupère chaque produit avec sa marge (prixAchat et prix)")
     @GetMapping(value = "/AdminProduits")
     public ResponseEntity<?> calculerMargeProduit(){
         List<Product>  produits = productDao.findAll();
@@ -119,9 +121,17 @@ public class ProductController {
         }else {
             return new ResponseEntity<>("Aucun produit trouvé dans la base de données.", HttpStatus.OK);
         }
-
-
-
     }
+    @ApiOperation(value = "Récupère la liste des produits trier ordre alphabétique")
+    @GetMapping(value = "/TrierProduits")
+    public ResponseEntity<?>  trierProduitsParOrdreAlphabetique(){
+       Optional< List<Product> > produits = productDao.findAllByOrderByNomAsc();
+       if (produits.isPresent()){
+           return new ResponseEntity<>(produits.get(), HttpStatus.OK);
+       }else {
+           return new ResponseEntity<>("Aucun produit trouvé pour être trié par ordre alphabétique.", HttpStatus.OK);
+       }
+    }
+
 
 }
