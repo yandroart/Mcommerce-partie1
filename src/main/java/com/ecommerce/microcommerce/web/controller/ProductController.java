@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -104,5 +107,21 @@ public class ProductController {
     }
 
 
+    @GetMapping(value = "/AdminProduits")
+    public ResponseEntity<?> calculerMargeProduit(){
+        List<Product>  produits = productDao.findAll();
+        HashMap<String, Integer>  map = new HashMap<>();
+        if (produits!=null && !produits.isEmpty()){
+            produits.forEach(product -> {
+                map.put(product.toString(), (product.getPrix()-product.getPrixAchat()));
+            });
+            return new ResponseEntity<>(map, HttpStatus.OK);
+        }else {
+            return new ResponseEntity<>("Aucun produit trouvé dans la base de données.", HttpStatus.OK);
+        }
+
+
+
+    }
 
 }
